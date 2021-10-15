@@ -24,6 +24,8 @@ RUN wget --no-verbose -O apache-spark.tgz "https://archive.apache.org/dist/spark
 # Apache spark environment
 FROM builder as apache-spark
 
+COPY /lib/graphframes-0.8.1-spark2.4-s_2.11.jar  /opt/spark/jars
+
 WORKDIR /opt/spark
 
 ENV SPARK_MASTER_PORT=7077 \
