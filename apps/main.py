@@ -16,10 +16,10 @@ def create_transport_graph():
         StructField("longitude", FloatType(), True),
         StructField("population", IntegerType(), True)
     ]
-    nodes = spark.read.csv("transport-nodes.csv", header=True,
+    nodes = spark.read.csv("data/transport-nodes.csv", header=True,
                            schema=StructType(node_fields))
 
-    rels = spark.read.csv("transport-relationships.csv", header=True)
+    rels = spark.read.csv("data/transport-relationships.csv", header=True)
     reversed_rels = (rels.withColumn("newSrc", rels.dst)
                      .withColumn("newDst", rels.src)
                      .drop("dst", "src")
