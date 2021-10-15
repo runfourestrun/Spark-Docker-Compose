@@ -15,6 +15,9 @@
 
 
 
+# Need to run this command: 
+* pyspark --packages graphframes:graphframes-0.8.1-spark2.4-s_2.11 --jars graphframes-0.8.1-spark2.4-s_2.11.jar
+
 ### Example pyspark submit 
 
 * /opt/spark/bin/spark-submit --master spark://spark-master:7077 \
@@ -24,6 +27,3 @@
 
 
 
-
-Need to run this command: 
-* pyspark --packages graphframes:graphframes-0.8.1-spark2.4-s_2.11 --jars graphframes-0.8.1-spark2.4-s_2.11.jar
